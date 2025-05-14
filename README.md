@@ -19,8 +19,20 @@ Usage
 
 - Install torch and tqdm (preferably in a virtualenv)
 - Download the model.safetensors file (from the release)
-- Run `convert input.pt output.safetensors` or `convert input.safetensors output.safetensors`
+- Run `python convert.py input.pt output.safetensors` or `python convert.py input.safetensors output.safetensors`
 
+Example:
+```
+(venv) c:\sdxl-embedding-converter> python convert.py wendyGNRC.pt wendyGNRC.safetensors
+WARNING! You are loading a PickleTensor file, please confirm... (Y/N) y
+Found 10 embeddings to convert.
+Starting conversion...
+100%|██████████████████████████████████| 10/10 [00:00<00:00, 285.71it/s]
+Done! Saving wendyGNRC.safetensors
+Finished!
+```
+
+The conversion can be done on CPU, the model is very small.
 
 Training
 --------
